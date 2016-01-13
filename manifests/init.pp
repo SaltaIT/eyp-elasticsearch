@@ -1,6 +1,8 @@
 #
 class elasticsearch (
+                      $data=true,
                       $shards='1',
+                      $master=true,
                       $replicas='0',
                       $nodename='es01',
                       $clustername='es',
