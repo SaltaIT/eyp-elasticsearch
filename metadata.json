@@ -12,5 +12,11 @@
     {"name":"eyp/python","version_requirement":">= 0.1.0"},
     {"name":"evenup/curator","version_requirement":">= 2.0.1"}
 
+  ],
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "RedHat",
+      "operatingsystemrelease": [ "6", "7" ]
+    }
   ]
 }
