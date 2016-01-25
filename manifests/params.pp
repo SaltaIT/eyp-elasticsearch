@@ -9,7 +9,7 @@ class elasticsearch::params {
         /^[67].*$/:
         {
         }
-        default: { fail("Unsupported RHEL/CentOS version!")  }
+        default: { fail('Unsupported RHEL/CentOS version!')  }
       }
     }
     default  : { fail('Unsupported OS!') }
