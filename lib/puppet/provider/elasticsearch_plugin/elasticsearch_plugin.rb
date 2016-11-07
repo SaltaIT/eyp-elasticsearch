@@ -37,8 +37,8 @@ Puppet::Type.type(:elasticsearch_plugin).provide(:elasticsearch_plugin) do
   end
 
   def create
-    debug "call create()"+resource[:basename]+"-"+resource[:name]
-    plugin(['--install', resource[:basename]+"-"+resource[:name] ])
+    debug "call create()"+resource[:basename]+"/"+resource[:name]
+    plugin(['--install', resource[:basename]+"/"+resource[:name] ])
   end
 
   def destroy
