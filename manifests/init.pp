@@ -5,7 +5,7 @@ class elasticsearch (
                       $master              = true,
                       $replicas            = '0',
                       $nodename            = $::hostname,
-                      $clustername         = 'es',
+                      $clustername         = 'elasticsearchcluster',
                       $network_host        = undef,
                       $disable_dynamic     = true,
                       $discovery_multicast = false,
