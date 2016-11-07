@@ -7,7 +7,7 @@ Puppet::Type.newtype(:elasticsearch_plugin) do
     'elasticsearch'
   end
 
-  newparam(:name, :namevar => true) do
+  newparam(:name) do
     desc 'plugin to manage'
 
     validate do |value|

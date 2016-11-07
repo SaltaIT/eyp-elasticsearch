@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 0.1.12
+
+* added plugin management using **elasticsearch_plugin**
+
 ## 0.1.11
 
 **INCOMPATIBLE CHANGE**:
