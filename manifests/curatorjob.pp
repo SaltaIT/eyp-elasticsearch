@@ -1,8 +1,8 @@
 class elasticsearch::curatorjob (
-                                  $command='close',
-                                  $older_than='7',
-                                  $cron_hour='7',
-                                  $cron_minute='02'
+                                  $command     = 'close',
+                                  $older_than  = '7',
+                                  $cron_hour   = '7',
+                                  $cron_minute = '02'
                                 ) inherits elasticsearch::params {
 
   # # Curator

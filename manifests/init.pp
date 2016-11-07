@@ -1,14 +1,15 @@
 #
 class elasticsearch (
-                      $data=true,
-                      $shards='1',
-                      $master=true,
-                      $replicas='0',
-                      $nodename='es01',
-                      $clustername='es',
-                      $network_host=undef,
-                      $disable_dynamic=true,
-                      $discovery_multicast=false,
+                      $data                = true,
+                      $shards              = '1',
+                      $master              = true,
+                      $replicas            = '0',
+                      $nodename            = 'es01',
+                      $clustername         = 'es',
+                      $network_host        = undef,
+                      $disable_dynamic     = true,
+                      $discovery_multicast = false,
+                      $discovery_unicast   = [ '127.0.0.1:9300' ],
                     ) inherits elasticsearch::params {
 
   Exec {
@@ -16,7 +17,8 @@ class elasticsearch (
   }
 
   exec { 'check java elasticsearch':
-    command => 'update-alternatives --display java',
+    command => 'which java',
+    unless  => 'which java',
   }
 
   yumrepo { 'elasticsearch-1.7':
