@@ -4,7 +4,7 @@ class elasticsearch (
                       $shards              = '1',
                       $master              = true,
                       $replicas            = '0',
-                      $nodename            = 'es01',
+                      $nodename            = $::hostname,
                       $clustername         = 'es',
                       $network_host        = undef,
                       $disable_dynamic     = true,
