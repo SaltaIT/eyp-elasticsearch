@@ -1,5 +1,6 @@
 #
 class elasticsearch (
+                      $version             = '5',
                       $data                = true,
                       $shards              = '1',
                       $master              = true,
@@ -21,17 +22,45 @@ class elasticsearch (
     unless  => 'which java',
   }
 
-  yumrepo { 'elasticsearch-1.7':
-    baseurl  => 'http://packages.elasticsearch.org/elasticsearch/1.7/centos',
-    descr    => 'Elasticsearch repository',
-    enabled  => '1',
-    gpgcheck => '0',
-    gpgkey   => 'http://packages.elasticsearch.org/GPG-KEY-elasticsearch',
+  case $version
+  {
+    '1.7':
+    {
+      yumrepo { 'elasticsearch-1.7':
+        baseurl  => 'http://packages.elasticsearch.org/elasticsearch/1.7/centos',
+        descr    => 'Elasticsearch repository',
+        enabled  => '1',
+        gpgcheck => '0',
+        gpgkey   => 'http://packages.elasticsearch.org/GPG-KEY-elasticsearch',
+        before => Package['elasticsearch'],
+      }
+    }
+    '5':
+    {
+      # [elasticsearch-5.x]
+      # name=Elasticsearch repository for 5.x packages
+      # baseurl=https://artifacts.elastic.co/packages/5.x/yum
+      # gpgcheck=1
+      # gpgkey=https://artifacts.elastic.co/GPG-KEY-elasticsearch
+      # enabled=1
+      # autorefresh=1
+      # type=rpm-md
+      yumrepo { 'elasticsearch-5.x':
+        baseurl  => 'https://artifacts.elastic.co/packages/5.x/yum',
+        descr    => 'Elasticsearch repository',
+        enabled  => '1',
+        gpgcheck => '0',
+        gpgkey   => 'http://packages.elasticsearch.org/GPG-KEY-elasticsearch',
+        before => Package['elasticsearch'],
+      }
+    }
   }
+
+
 
   package { 'elasticsearch':
     ensure  => 'installed',
-    require => [ Yumrepo['elasticsearch-1.7'], Exec['check java elasticsearch']],
+    require => Exec['check java elasticsearch'],
   }
 
   file { '/etc/elasticsearch/elasticsearch.yml':

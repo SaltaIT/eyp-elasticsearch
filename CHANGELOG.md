@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 0.2.0
+
+* Updated to **elasticsearch 5**
+
 ## 0.1.12
 
 * added plugin management using **elasticsearch_plugin**
