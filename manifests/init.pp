@@ -57,8 +57,6 @@ class elasticsearch (
     default: { fail('Unsupported') }
   }
 
-
-
   package { 'elasticsearch':
     ensure  => 'installed',
     require => Exec['check java elasticsearch'],
