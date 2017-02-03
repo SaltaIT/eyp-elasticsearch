@@ -32,7 +32,7 @@ class elasticsearch (
         enabled  => '1',
         gpgcheck => '0',
         gpgkey   => 'http://packages.elasticsearch.org/GPG-KEY-elasticsearch',
-        before => Package['elasticsearch'],
+        before   => Package['elasticsearch'],
       }
     }
     '5':
@@ -51,9 +51,10 @@ class elasticsearch (
         enabled  => '1',
         gpgcheck => '0',
         gpgkey   => 'http://packages.elasticsearch.org/GPG-KEY-elasticsearch',
-        before => Package['elasticsearch'],
+        before   => Package['elasticsearch'],
       }
     }
+    default: { fail('Unsupported') }
   }
 
 
