@@ -8,9 +8,10 @@
   "project_page": "https://github.com/NTTCom-MS/eyp-elasticsearch",
   "issues_url": "https://github.com/NTTCom-MS/eyp-elasticsearch/issues",
   "dependencies": [
-    {"name":"puppetlabs/stdlib","version_requirement":">= 1.0.0"},
-    {"name":"eyp/python","version_requirement":">= 0.1.0"},
-    {"name":"evenup/curator","version_requirement":">= 2.0.1"}
+    {"name":"puppetlabs/stdlib","version_requirement":">= 4.12.0 < 9.9.9"},
+    {"name":"puppetlabs/concat","version_requirement":">= 1.2.3 < 3.0.0"},
+    {"name":"eyp/eyplib","version_requirement":">= 0.1.0 < 0.2.0"},
+    {"name":"eyp/python","version_requirement":">= 0.1.0 < 0.2.0"}
 
   ],
   "operatingsystem_support": [
