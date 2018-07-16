@@ -9,7 +9,7 @@ class elasticsearch::params {
     {
       case $::operatingsystemrelease
       {
-        /^[5-7].*$/:
+        /^7.*$/:
         {
           $package_url="https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-6.3.1.rpm"
           $package_provider = 'rpm'
