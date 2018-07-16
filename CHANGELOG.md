@@ -4,7 +4,7 @@
 
 * Added support for elasticsearch 6.3
 * **INCOMPATIBLE CHANGE**:
-  - Dropped support for older
+  - Dropped support for older versions
 
 ## 0.2.0
 
