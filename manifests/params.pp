@@ -11,6 +11,8 @@ class elasticsearch::params {
       {
         /^[5-7].*$/:
         {
+          $package_url="https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-6.3.1.rpm"
+          $package_provider = 'rpm'
         }
         default: { fail("Unsupported RHEL/CentOS version! - ${::operatingsystemrelease}")  }
       }
@@ -23,12 +25,6 @@ class elasticsearch::params {
         {
           case $::operatingsystemrelease
           {
-            /^14.*$/:
-            {
-            }
-            /^16.*$/:
-            {
-            }
             default: { fail("Unsupported Ubuntu version! - ${::operatingsystemrelease}")  }
           }
         }

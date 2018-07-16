@@ -7,8 +7,6 @@ class elasticsearch(
                             $service_enable        = true,
                           ) inherits elasticsearch::params{
 
-  validate_re($package_ensure, [ '^present$', '^installed$', '^absent$', '^purged$', '^held$', '^latest$' ], 'Not a supported package_ensure: present/absent/purged/held/latest')
-
   class { '::elasticsearch::install': }
   -> class { '::elasticsearch::config': }
   ~> class { '::elasticsearch::service': }

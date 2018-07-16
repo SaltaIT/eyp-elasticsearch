@@ -1,12 +1,12 @@
 {
   "name": "eyp-elasticsearch",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "author": "eyp",
   "summary": "elasticsearch management",
   "license": "Apache-2.0",
-  "source": "",
-  "project_page": null,
-  "issues_url": null,
+  "source": "https://github.com/NTTCom-MS/eyp-elasticsearch",
+  "project_page": "https://github.com/NTTCom-MS/eyp-elasticsearch",
+  "issues_url": "https://github.com/NTTCom-MS/eyp-elasticsearch/issues",
   "dependencies": [
     {"name":"puppetlabs/stdlib","version_requirement":">= 1.0.0"},
     {"name":"eyp/python","version_requirement":">= 0.1.0"},
@@ -16,30 +16,26 @@
   "operatingsystem_support": [
     {
       "operatingsystem": "RedHat",
-      "operatingsystemrelease": [ "6", "7" ]
+      "operatingsystemrelease": [ "7" ]
     },
     {
       "operatingsystem": "CentOS",
-      "operatingsystemrelease": [ "6", "7" ]
+      "operatingsystemrelease": [ "7" ]
     },
     {
       "operatingsystem": "Scientific",
-      "operatingsystemrelease": [ "6", "7" ]
+      "operatingsystemrelease": [ "7" ]
     },
     {
       "operatingsystem": "OEL",
-      "operatingsystemrelease": [ "6", "7" ]
+      "operatingsystemrelease": [ "7" ]
     },
     {
       "operatingsystem": "OracleLinux",
-      "operatingsystemrelease": [ "6", "7" ]
+      "operatingsystemrelease": [ "7" ]
     }
   ],
   "requirements": [
-    {
-      "name": "pe",
-      "version_requirement": ">= 3.8.0"
-    },
     {
       "name": "puppet",
       "version_requirement": ">= 3.8.0"
