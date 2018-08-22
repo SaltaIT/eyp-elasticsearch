@@ -5,6 +5,7 @@
 * Added support for elasticsearch 6.3
 * **INCOMPATIBLE CHANGE**:
   - Dropped support for older versions
+  - Removed **disable_dynamic**
 
 ## 0.2.0
 

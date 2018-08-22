@@ -12,7 +12,6 @@ class elasticsearch(
                       $nodename              = $::hostname,
                       $clustername           = 'elasticsearchcluster',
                       $network_host          = undef,
-                      $disable_dynamic       = true,
                       $discovery_multicast   = false,
                       $discovery_unicast     = [ '127.0.0.1:9300' ],
                       $path_data             = '/var/lib/elasticsearch',
