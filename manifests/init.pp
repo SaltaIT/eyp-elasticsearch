@@ -11,6 +11,7 @@ class elasticsearch(
                       $discovery_unicast     = [ '127.0.0.1:9300' ],
                       $path_data             = '/var/lib/elasticsearch',
                       $path_logs             = '/var/log/elasticsearch',
+                      $path_repo             = undef,
                     ) inherits elasticsearch::params{
 
   class { '::elasticsearch::install': }

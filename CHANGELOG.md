@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 6.5.0
+
+* Supported version: elasticsearch 6.5
+* Added support for shared filesystem respository
+
 ## 6.3.0
 
 * Added support for elasticsearch 6.3

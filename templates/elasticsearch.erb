@@ -41,6 +41,11 @@ path.data: <%= @path_data %>
 #
 path.logs: <%= @path_logs %>
 
+<%- if defined?(@path_repo) -%>
+# Shared filesystem repository
+#
+path.repo: [ <%= @path_repo.map{ |val| "\"#{val}\"" }.join(',') %> ]
+<%- end -%>
 
 #
 # ----------------------------------- Memory -----------------------------------

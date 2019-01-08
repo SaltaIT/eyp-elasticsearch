@@ -11,7 +11,7 @@ class elasticsearch::params {
       {
         /^7.*$/:
         {
-          $package_url='https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-6.3.1.rpm'
+          $package_url='https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-6.5.4.rpm'
           $package_provider = 'rpm'
         }
         default: { fail("Unsupported RHEL/CentOS version! - ${::operatingsystemrelease}")  }
