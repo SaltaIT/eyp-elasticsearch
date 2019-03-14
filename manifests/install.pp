@@ -7,6 +7,13 @@ class elasticsearch::install inherits elasticsearch {
       source   => $elasticsearch::params::package_url,
       provider => $elasticsearch::params::package_provider,
     }
+
+    if($elasticsearch::use_eypjava)
+    {
+      Package[$elasticsearch::params::package_name] {
+        require => Class['::java'],
+      }
+    }
   }
 
 }

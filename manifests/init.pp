@@ -12,6 +12,7 @@ class elasticsearch(
                       $path_data             = '/var/lib/elasticsearch',
                       $path_logs             = '/var/log/elasticsearch',
                       $path_repo             = undef,
+                      $use_eypjava           = true,
                     ) inherits elasticsearch::params{
 
   class { '::elasticsearch::install': }
