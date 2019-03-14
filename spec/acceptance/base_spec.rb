@@ -8,6 +8,8 @@ describe 'elasticsearch class' do
     it 'should work with no errors' do
       pp = <<-EOF
 
+      class { 'java': }
+
       class { 'elasticsearch': }
 
       EOF
