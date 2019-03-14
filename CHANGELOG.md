@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 6.5.1
+
+* **INCOMPATIBLE CHANGE**: added optional java dependency
+
 ## 6.5.0
 
 * Supported version: elasticsearch 6.5
