@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 6.5.2
+
+* updated metadata
+
 ## 6.5.1
 
 * **INCOMPATIBLE CHANGE**: added optional java dependency
