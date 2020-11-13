@@ -1,7 +1,7 @@
 {
   "name": "eyp-elasticsearch",
   "version": "6.5.2",
-  "author": "eyp",
+  "author": "Jordi Prats",
   "summary": "elasticsearch management",
   "license": "Apache-2.0",
   "source": "https://github.com/SaltaIT/eyp-elasticsearch",
